@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title>REGISTRO</title>
+</head>
+<body>
+    <h1 id="id">REGISTRO </h1>
+    
+    <p>Escriba su correo electrónico</p>
+        <input type="email" name="" id="email">
+    <br>
+
+    <p id="p">Escriba su contraseña</p>
+        <input type="password" name="" id="pass">
+    <br>
+    <br>
+        <button id="ingresar">REGISTRARSE</button>
+
+    <h1 id="id1">INGRESAR</h1>
+    <p>Escriba su correo electrónico</p>
+        <input type="email" name="" id="email1">
+    <br>
+
+    <p id="pp">Escriba su contraseña</p>
+        <input type="password" name="" id="pass1">
+    <br>
+    <br>
+        <button id="ingresar1">INGRESAR</button>
+
+
+    <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+            import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+            //import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+
+            // Your web app's Firebase configuration    
+            const firebaseConfig = {
+            apiKey: "AIzaSyCWOQIMFxMt-RiLEnvXtAs5hZf_SEYN9Us",
+            authDomain: "usuario-65baa.firebaseapp.com",
+            projectId: "usuario-65baa",
+            storageBucket: "usuario-65baa.appspot.com",
+            messagingSenderId: "176873206341",
+            appId: "1:176873206341:web:0f05efdaba20566705e92c"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const auth = getAuth(app);
+
+            document.getElementById("ingresar").addEventListener("click", function(){
+    const email = document.getElementById("email").value
+
+    const pass = document.getElementById("pass").value
+
+    createUserWithEmailAndPassword(auth, email, pass)
+    .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        // ...
+        alert("La cuenta se creo correctamente.")
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+        alert("Presenta fallas en la autenticación o ya registraste este correo.")
+    });
+})
+
+    //Aqui comienza
+    document.getElementById("ingresar1").addEventListener("click", function(){
+    const email1 = document.getElementById("email1").value;
+    const password1 = document.getElementById("pass1").value;
+    
+    
+    signInWithEmailAndPassword(auth, email1, password1)
+.then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+    console.log("Ya estás en la nueva página.")
+    //Creamos una página nueva
+    window.open("https://www.google.com.pe/")
+})
+.catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log("No has llenado correctamente tus datos o no estás registrado")
+    });
+})
+
+</script>
+
+</body>
+</html>

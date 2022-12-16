@@ -1,0 +1,66 @@
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0px;
+    background-image: url(./img/fondo-ConvertImage.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1{
+    color: #f4e37b;
+    text-shadow: 1px 1px 10px #f4e37b;
+    width: min-content;
+    margin-left: 340px;
+    font-size: 40px;
+}
+
+#id, #id1{
+margin-top: 50px;
+}
+
+h3{
+    color: #f4e37b;
+    margin-left: 300px;
+}
+
+p{
+    color: #45aed4;
+    margin-left: 273px;
+    font-size: 25px;
+    text-shadow: 1px 1px 3px #000000 ;
+}
+
+#p, #pp{
+    margin-left: 315px;
+}
+
+#pass, #pass1 {
+    margin-left: 335px;
+    padding: 2px 10px 2px 10px;
+    background-color: #8ea8be8f;
+    border: white;
+}
+
+#email, #email1{
+    margin-left: 335px;
+    padding: 2px 10px 2px 10px;
+    background-color: #8ea8be98;
+    border: white;
+}
+
+#ingresar{
+margin-left: 370px ;
+font-size: px;
+padding: 10px;
+background-color: #f4e47ba4;
+color: rgba(255, 255, 255, 0.986);
+}
+
+#ingresar1{
+margin-left: 385px;
+padding: 10px ;
+background-color: #f4e47ba4;
+color: rgb(255, 255, 255);
+
+}
