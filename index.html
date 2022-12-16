@@ -86,14 +86,14 @@
     // Signed in 
     const user = userCredential.user;
     // ...
-    console.log("Ya estás en la nueva página.")
+    alert("Ya estás en la nueva página.")
     //Creamos una página nueva
     window.open("https://www.google.com.pe/")
 })
 .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    console.log("No has llenado correctamente tus datos o no estás registrado")
+    alert("No has llenado correctamente tus datos o no estás registrado")
     });
 })
 
